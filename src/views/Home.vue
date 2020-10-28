@@ -3,10 +3,10 @@
     <img class="hero-image" src="../assets/img/crevasse.jpg">
     <HelloWorld msg="Welcome to Crevasse Brewing"/>
     <div class="beer-container">
-      <BeerThumbnail title="Glacier IPA" description="have a nice glacier in the crevasse"/>
-      <BeerThumbnail title="Caetano IPA" description="have a nice glacier in the crevasse"/>
-      <BeerThumbnail title="Juneau IPA" description="have a nice glacier in the crevasse"/>
-      <BeerThumbnail title="Medli IPA" description="have a nice glacier in the crevasse"/>
+      <BeerThumbnail containerClass="glacier" title="Glacier IPA" description="have a nice glacier in the crevasse"/>
+      <BeerThumbnail containerClass="caetano" title="Caetano IPA" description="have a nice glacier in the crevasse"/>
+      <BeerThumbnail containerClass="juneaur" title="Juneau IPA" description="have a nice glacier in the crevasse"/>
+      <BeerThumbnail containerClass="medli" title="Medli IPA" description="have a nice glacier in the crevasse"/>
     </div>
     <h2 class="headline">we da best</h2>
   </div>
