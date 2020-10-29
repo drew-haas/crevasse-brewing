@@ -19,3 +19,7 @@ html, body {
 
     // @media screen and (max-width: $bp-s) {}
 }
+
+p {
+    @extend .typography-body;
+}

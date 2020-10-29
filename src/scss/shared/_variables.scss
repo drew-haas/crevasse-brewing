@@ -1,20 +1,24 @@
 // Variables
 /* Color Scheme */
-$blue: dodgerblue;
+$blue-light: #A7D5F2;
+$blue-medium: #6DBFF2;
+$blue-primary: #048ABF;
+$turquoise: #0388A6;
+$red: #FF2434;
 
 // Grayscale
 $white: #ffffff;
-$off-white: #f5f5f5;
+$off-white: #F2F1F0;
 $black: #000000;
 $gray-light: #f1f1f1;
-$gray: #ccc;
-$gray-dark: #888;
+$gray: #4C4C4C;
+$gray-dark: #2D2D2D;
 
 /* THEME SPECIFIC */
-// $primary-color: $navy;
-// $secondary-color: $teal;
-// $text-color: $navy;
-// $accent-color: $teal;
+$primary-color: $blue-primary;
+$secondary-color: $turquoise;
+$text-color: $gray-dark;
+$accent-color: $red;
 
 /* Breakpoints */
 // breakpoints should be used with max-width's (non-mobile first)
@@ -33,7 +37,9 @@ $space-l: 3em;
 $space-xl: 4em;
 
 /* Fonts */
-$sans-serif: 'Open Sans', sans-serif;
+// $sans-serif: 'Open Sans', sans-serif;
+$sans-serif: 'Anton', sans-serif;
+$serif: 'Lora', serif;
 
 $base-size: 1em;
 $base-small: .8em;
