@@ -42,6 +42,7 @@ export default {
   font-size: 100px;
   letter-spacing: 4px;
   margin: 0;
+  color: $blue;
 }
 
 .beer-container {

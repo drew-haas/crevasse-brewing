@@ -1,0 +1,40 @@
+// Variables
+/* Color Scheme */
+$blue: dodgerblue;
+
+// Grayscale
+$white: #ffffff;
+$off-white: #f5f5f5;
+$black: #000000;
+$gray-light: #f1f1f1;
+$gray: #ccc;
+$gray-dark: #888;
+
+/* THEME SPECIFIC */
+// $primary-color: $navy;
+// $secondary-color: $teal;
+// $text-color: $navy;
+// $accent-color: $teal;
+
+/* Breakpoints */
+// breakpoints should be used with max-width's (non-mobile first)
+$bp-xxs: 420px;
+$bp-xs: 480px;
+$bp-s: 767px;
+$bp-m: 1024px;
+$bp-l: 1200px;
+$bp-xl: 1400px;
+
+/* Spacing */
+$page-width: $bp-xl;
+$space-s: 1em;
+$space-m: 2em;
+$space-l: 3em;
+$space-xl: 4em;
+
+/* Fonts */
+$sans-serif: 'Open Sans', sans-serif;
+
+$base-size: 1em;
+$base-small: .8em;
+$base-large: 1.3em;

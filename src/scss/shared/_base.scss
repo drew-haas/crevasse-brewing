@@ -1,0 +1,21 @@
+// Shared Base Styles
+html, body {
+    font-family: $sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+
+    // &.disable-scrolling {
+    //     overflow: hidden;
+    // }
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    overflow: hidden;
+
+    // @media screen and (max-width: $bp-s) {}
+}
