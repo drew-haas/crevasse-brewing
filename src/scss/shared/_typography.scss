@@ -2,22 +2,22 @@
 // Typography Classes Only
 // -------------------------
 
-// .typography-cta {}
-
 .typography-title {
-    font-size: 80px;
-    line-height: 1.2;
-    font-family: $sans-serif;
+    font-size: 120px;
+    line-height: .8;
+    font-family: $serif-display;
+    font-weight: lighter;
+    letter-spacing: -2px;
 
     @media screen and (max-width: $bp-s) {
-        font-size: 40px;
+        font-size: 60px;
     }
 }
 
 .typography-subtitle {
     font-size: 24px;
     line-height: 1.2;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-family: $sans-serif;
 
@@ -28,10 +28,28 @@
 
 .typography-body {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.8;
     font-family: $serif;
 
+    &-reduced {
+        line-height: 1.5;
+    }
+
     @media screen and (max-width: $bp-s) {
-        font-size: 12px;
+        font-size: 14px;
+    }
+}
+
+.typography-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+    color: $gray-dark;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-style: italic;
+
+    &:hover {
+        color: $accent-color;
     }
 }

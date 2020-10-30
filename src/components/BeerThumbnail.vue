@@ -1,7 +1,7 @@
 <template>
   <div class="beer-thumbnail-container">
     <div class="beer-title typography-subtitle">{{title}}</div>
-    <p class="beer-description">{{description}}</p>
+    <p class="typography-body-reduced beer-description">{{description}}</p>
   </div>
 </template>
 

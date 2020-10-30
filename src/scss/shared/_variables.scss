@@ -38,8 +38,12 @@ $space-xl: 4em;
 
 /* Fonts */
 // $sans-serif: 'Open Sans', sans-serif;
-$sans-serif: 'Anton', sans-serif;
+$sans-serif: 'Roboto', sans-serif;
 $serif: 'Lora', serif;
+$serif-base: $serif;
+$serif-display: 'nw-condensed-regular';
+$serif-display-thin: 'nw-thin';
+$serif-display-bold: 'nw-condensed-bold';
 
 $base-size: 1em;
 $base-small: .8em;
