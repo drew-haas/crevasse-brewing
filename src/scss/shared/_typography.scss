@@ -1,5 +1,55 @@
+// -------------------------
 // Typography Classes Only
-// .typography-title {}
-// .typography-subtitle {}
-// .typography-body {}
-// .typography-cta {}
+// -------------------------
+
+.typography-title {
+    font-size: 120px;
+    line-height: .8;
+    font-family: $serif-display;
+    font-weight: lighter;
+    letter-spacing: -2px;
+
+    @media screen and (max-width: $bp-s) {
+        font-size: 60px;
+    }
+}
+
+.typography-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+
+    @media screen and (max-width: $bp-s) {
+        font-size: 20px;
+    }
+}
+
+.typography-body {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: $serif;
+
+    &-reduced {
+        line-height: 1.5;
+    }
+
+    @media screen and (max-width: $bp-s) {
+        font-size: 14px;
+    }
+}
+
+.typography-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+    color: $gray-dark;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-style: italic;
+
+    &:hover {
+        color: $accent-color;
+    }
+}

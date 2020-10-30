@@ -1,1 +1,50 @@
+// ----------------------
 // Font Declarations Only
+// ----------------------
+
+// Lora
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+// Neue World
+@font-face {
+    font-family: 'nw-condensed-regular';
+    src: url('~@/assets/fonts/neueworld-condensedregular-webfont.woff2') format('woff2'),
+    url('~@/assets/fonts/neueworld-condensedregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nw-thin';
+    src: url('~@/assets/fonts/neueworld-extendedthin-webfont.woff2') format('woff2'),
+    url('~@/assets/fonts/neueworld-extendedthin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nw-condensed-bold';
+    src: url('~@/assets/fonts/neueworld-semicondensedultrabold-webfont.woff2') format('woff2'),
+    url('~@/assets/fonts/neueworld-semicondensedultrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nw-black';
+    src: url('~@/assets/fonts/neueworld-semiextendedblack-webfont.woff2') format('woff2'),
+    url('~@/assets/fonts/neueworld-semiextendedblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nw-super-condensed-light';
+    src: url('~@/assets/fonts/neueworld-supercondensedlight-webfont.woff2') format('woff2'),
+    url('~@/assets/fonts/neueworld-supercondensedlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
