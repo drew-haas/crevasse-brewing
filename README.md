@@ -1,7 +1,5 @@
 # crevasse-brewing
-Deploying with [Vercel](https://vercel.com/):
-
-[crevasse-brewing.vercel.app](https://crevasse-brewing.vercel.app/)
+<a href="https://crevasse-brewing.vercel.app/" target="_blank">crevasse-brewing.vercel.app</a>
 
 ## Project setup
 ```
