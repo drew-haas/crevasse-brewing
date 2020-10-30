@@ -1,5 +1,5 @@
 # crevasse-brewing
-<a href="https://crevasse-brewing.vercel.app/" target="_blank">crevasse-brewing.vercel.app</a>
+[crevasse-brewing.vercel.app](https://crevasse-brewing.vercel.app/)
 
 ## Project setup
 ```
