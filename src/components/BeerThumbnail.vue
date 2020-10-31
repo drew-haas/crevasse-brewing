@@ -1,5 +1,6 @@
 <template>
   <div class="beer-thumbnail-container">
+    <div class="beer-image"></div>
     <div class="beer-title typography-subtitle">{{title}}</div>
     <p class="typography-body-reduced beer-description">{{description}}</p>
   </div>
@@ -25,8 +26,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .beer-thumbnail-container {
-  // border: 1px solid orange;
+  text-align: center;
   padding: 5px;
-  margin: 5px;
+  margin: 20px 10px;
+}
+
+.beer-image {
+  width: 200px;
+  height: 300px;
+  background-color: $off-white;
+  margin: 0 auto 23px;
+}
+
+.beer-description {
+  margin-top: 7px;
 }
 </style>

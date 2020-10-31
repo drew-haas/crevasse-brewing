@@ -32,7 +32,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .nav {
   width: 100%;
   position: relative;
@@ -40,7 +40,6 @@ export default {
   justify-content: space-between;
   font-family: $sans-serif;
   font-weight: lighter;
-  background-color: $off-white;
 }
 
 .nav-list {
@@ -54,31 +53,41 @@ export default {
   li {
     margin: 10px 15px;
   }
+
+  @media screen and (max-width: $bp-l) {
+    display: none;
+  }
 }
 
 .nav-logo {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
   display: flex;
   align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
+
+  @media screen and (max-width: $bp-l) {
+    position: relative;
+    left: 0;
+    transform: translate(0);
+    margin: 20px;
+  }
 
   img {
-    width: 165px;
+    width: 185px;
     display: block;
+
+    @media screen and (max-width: $bp-l) {
+      width: 165px;
+    }
   }
 }
 
 .nav-icon {
-  width: 100px;
-  background-color: $gray;
-  min-height: 50px;
-}
-
-@media screen and (max-width: 767px) {
-  .nav-list {
-    display: none;
-  }
+  width: 50px;
+  height: 50px;
+  background-color: $off-white;
+  cursor: pointer;
 }
 </style>
