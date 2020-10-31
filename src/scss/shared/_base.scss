@@ -2,12 +2,7 @@
 // Shared Base Styles
 // ------------------
 
-.section-container {
-    max-width: $page-width;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
+// Type
 h1, h2 {
     margin: 50px 0 25px;
 }
@@ -21,6 +16,26 @@ a {
     text-decoration: none;
 }
 
+// Section specific
+.section-container {
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.section-hero {
+    margin: 200px 0;
+
+    @media screen and (max-width: $bp-s) {
+        margin: 60px 0;
+    }
+}
+
 .hero-copy {
     max-width: 500px;
+}
+
+// Links
+.router-link-active {
+    color: $primary-color;
 }
