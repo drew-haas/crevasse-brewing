@@ -17,7 +17,7 @@ export default {
   },
   setup () {
     onMounted(() => {
-      console.log('beer thumbnail mounted')
+      // console.log('beer thumbnail mounted')
     })
   }
 }
