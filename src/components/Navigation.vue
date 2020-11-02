@@ -16,17 +16,89 @@
 
     <div class="nav-icon"></div>
   </div>
+  <div class="main-menu">
+    <div class="grid-container">
+      <div class="grid-item grid-item-contact">
+        <h2>Contact</h2>
+      </div>
+      <div class="grid-item">2</div>
+      <div class="grid-item grid-item-list">
+        <ul>
+          <li class="typography-link">Home</li>
+          <li class="typography-link">About</li>
+          <li class="typography-link">Locations</li>
+          <li class="typography-link">Beers</li>
+          <li class="typography-link">More Information</li>
+        </ul>
+      </div>
+      <div class="grid-item grid-item-4">4</div>
+      <div class="grid-item grid-item-5">5</div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { onMounted } from 'vue'
+import gsap from 'gsap'
 
 export default {
   name: 'Navigation',
   setup () {
     onMounted(() => {
-      // console.log('on mounted')
+      let menuOpen = false
+      const mainMenu = document.querySelector('.main-menu')
+      const navIcon = document.querySelector('.nav-icon')
+
+      // Toggle Menu Opening
+      navIcon.addEventListener('click', () => {
+        if (menuOpen) {
+          closeMenu()
+        } else {
+          openMenu()
+        }
+      })
+
+      // Open Main Menu
+      function openMenu () {
+        // disable scrolling
+        document.body.classList.add('disable-scrolling')
+        mainMenu.classList.add('menu-open')
+
+        // animate menu
+        gsap.to('.main-menu', {
+          duration: 1,
+          ease: 'Expo.easeInOut',
+          x: 0
+        })
+
+        // update state variable
+        menuOpen = true
+
+        console.log('open menu')
+      }
+
+      // Close Main Menu
+      function closeMenu () {
+        // enable scrolling
+        document.body.classList.remove('disable-scrolling')
+        mainMenu.classList.remove('menu-open')
+
+        // animate menu
+        gsap.to('.main-menu', {
+          duration: 1,
+          ease: 'Expo.easeInOut',
+          x: '100%'
+        })
+
+        // update state variable
+        menuOpen = false
+
+        console.log('close menu')
+      }
     })
+  },
+  methods: {
+
   }
 }
 </script>
@@ -87,7 +159,63 @@ export default {
 .nav-icon {
   width: 50px;
   height: 50px;
-  background-color: $off-white;
+  background-color: $accent-color;
   cursor: pointer;
+  z-index: 11;
+}
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  transform: translateX(100%);
+  background-color: $primary-color;
+
+  &.menu-open {
+    pointer-events: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50vw;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.grid-item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $off-white;
+  grid-row-end: last-line;
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  li {
+    font-size: 30px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.grid-item-contact {
+  background-color: $blue-light;
+}
+
+.grid-item-4 {
+  background-color: $turquoise;
+}
+
+.grid-item-5 {
+  background-color: $gray-dark;
+  color: $off-white;
 }
 </style>

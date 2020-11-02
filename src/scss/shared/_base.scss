@@ -2,9 +2,20 @@
 // Shared Base Styles
 // ------------------
 
-// Type
+body {
+    &.disable-scrolling {
+        overflow: hidden;
+    }
+}
+
 h1, h2 {
     margin: 50px 0 25px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 p {
