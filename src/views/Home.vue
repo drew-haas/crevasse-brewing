@@ -8,6 +8,10 @@
     </section>
 
     <section class="section-beer-list">
+      <div class="section-container">
+        <h2 class="typography-title">Our Beers</h2>
+        <p class="hero-copy">Tattooed snackwave paleo, fingerstache cronut enamel pin tacos jean shorts. Austin snackwave flexitarian hoodie cold-pressed tousled affogato thundercats YOLO.</p>
+      </div>
       <div class="beer-container">
         <BeerThumbnail v-for="beer in beers" :key="beer.name" :title="beer.name" :description="beer.description"></BeerThumbnail>
       </div>
@@ -48,7 +52,7 @@ export default {
   max-width: 100%;
 
   @media screen and (max-width: $bp-m) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
   }
 }
 </style>

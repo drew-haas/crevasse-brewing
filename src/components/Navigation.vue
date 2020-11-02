@@ -14,15 +14,23 @@
       </router-link>
     </div>
 
-    <div class="nav-icon"></div>
+    <div class="nav-icon">
+      <div class="bar bar-1"></div>
+      <div class="bar bar-2"></div>
+    </div>
   </div>
   <div class="main-menu">
     <div class="grid-container">
-      <div class="grid-item grid-item-contact">
-        <h2>Contact</h2>
+      <div class="grid-item grid-item-1 grid-item-contact">
+        <h2 class="typography-subtitle">Contact</h2>
+        <p><a href="tel:614-000-0000">(614) 000 0000</a></p>
+        <p><a href="mailto:info@crevassebrewing.com">info@crevassebrewing.com</a></p>
       </div>
-      <div class="grid-item">2</div>
-      <div class="grid-item grid-item-list">
+      <div class="grid-item grid-item-2">
+        <p>He was a wise man who invented beer.</p>
+        <h3>- Plato</h3>
+      </div>
+      <div class="grid-item grid-item-3 grid-item-list">
         <ul>
           <li class="typography-link">Home</li>
           <li class="typography-link">About</li>
@@ -63,37 +71,35 @@ export default {
   methods: {
     openMenu () {
       // disable scrolling
-      document.body.classList.add('disable-scrolling')
-      this.mainMenu.classList.add('menu-open')
+      document.body.classList.add('disable-scrolling', 'main-menu-open')
 
       // animate menu
-      gsap.to('.main-menu', {
-        duration: 1,
+      const tl = gsap.timeline()
+      tl.to('.grid-item', {
+        duration: 0.8,
+        stagger: 0.1,
         ease: 'Expo.easeInOut',
-        x: 0
+        scaleY: 1
       })
 
       // update state variable
       this.menuOpen = true
-
-      console.log('open menu')
     },
     closeMenu () {
       // enable scrolling
-      document.body.classList.remove('disable-scrolling')
-      this.mainMenu.classList.remove('menu-open')
+      document.body.classList.remove('disable-scrolling', 'main-menu-open')
 
       // animate menu
-      gsap.to('.main-menu', {
-        duration: 1,
+      const tl = gsap.timeline()
+      tl.to('.grid-item', {
+        duration: 0.8,
+        stagger: 0.1,
         ease: 'Expo.easeInOut',
-        x: '100%'
+        scaleY: 0
       })
 
       // update state variable
       this.menuOpen = false
-
-      console.log('close menu')
     }
   }
 }
@@ -153,11 +159,36 @@ export default {
 }
 
 .nav-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 50px;
   height: 50px;
-  background-color: $accent-color;
   cursor: pointer;
   z-index: 11;
+
+  .bar {
+    width: 25px;
+    height: 2px;
+    background: $accent-color;
+    transition: .25s;
+  }
+
+  .bar-1 {
+    margin-bottom: 7px;
+  }
+
+  body.main-menu-open & {
+    .bar-1 {
+      transform: rotate(45deg);
+      transition: .25s;
+    }
+    .bar-2 {
+      transform: rotate(-45deg) translate(6px, -6px);
+      transition: .25s;
+    }
+  }
 }
 
 .main-menu {
@@ -168,10 +199,8 @@ export default {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  transform: translateX(100%);
-  background-color: $primary-color;
 
-  &.menu-open {
+  body.main-menu-open & {
     pointer-events: auto;
   }
 
@@ -181,6 +210,24 @@ export default {
     grid-template-rows: 1fr 1fr;
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: $bp-s) {
+      display: block;
+
+      .grid-item-1, .grid-item-2, .grid-item-4, .grid-item-5 {
+        display: none;
+      }
+
+      .grid-item-list {
+        height: 100vh;
+      }
+    }
+  }
+
+  .grid-item {
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    padding: 20px;
   }
 }
 
@@ -204,6 +251,19 @@ export default {
 
 .grid-item-contact {
   background-color: $blue-light;
+}
+
+.grid-item-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $primary-color;
+  color: $off-white;
+  text-align: center;
+
+  p {
+    font-size: 21px;
+  }
 }
 
 .grid-item-4 {

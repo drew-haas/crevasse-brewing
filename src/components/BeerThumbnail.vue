@@ -36,6 +36,11 @@ export default {
   height: 300px;
   background-color: $off-white;
   margin: 0 auto 23px;
+
+  @media screen and (max-width: $bp-m) {
+    width: 100%;
+    height: 20vh;
+  }
 }
 
 .beer-description {
