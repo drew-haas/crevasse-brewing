@@ -38,67 +38,63 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
 import gsap from 'gsap'
 
 export default {
   name: 'Navigation',
-  setup () {
-    onMounted(() => {
-      let menuOpen = false
-      const mainMenu = document.querySelector('.main-menu')
-      const navIcon = document.querySelector('.nav-icon')
+  data () {
+    return {
+      menuOpen: false
+    }
+  },
+  mounted () {
+    this.mainMenu = document.querySelector('.main-menu')
+    this.navIcon = document.querySelector('.nav-icon')
 
-      // Toggle Menu Opening
-      navIcon.addEventListener('click', () => {
-        if (menuOpen) {
-          closeMenu()
-        } else {
-          openMenu()
-        }
-      })
-
-      // Open Main Menu
-      function openMenu () {
-        // disable scrolling
-        document.body.classList.add('disable-scrolling')
-        mainMenu.classList.add('menu-open')
-
-        // animate menu
-        gsap.to('.main-menu', {
-          duration: 1,
-          ease: 'Expo.easeInOut',
-          x: 0
-        })
-
-        // update state variable
-        menuOpen = true
-
-        console.log('open menu')
-      }
-
-      // Close Main Menu
-      function closeMenu () {
-        // enable scrolling
-        document.body.classList.remove('disable-scrolling')
-        mainMenu.classList.remove('menu-open')
-
-        // animate menu
-        gsap.to('.main-menu', {
-          duration: 1,
-          ease: 'Expo.easeInOut',
-          x: '100%'
-        })
-
-        // update state variable
-        menuOpen = false
-
-        console.log('close menu')
+    // Toggle Menu Opening
+    this.navIcon.addEventListener('click', () => {
+      if (this.menuOpen) {
+        this.closeMenu()
+      } else {
+        this.openMenu()
       }
     })
   },
   methods: {
+    openMenu () {
+      // disable scrolling
+      document.body.classList.add('disable-scrolling')
+      this.mainMenu.classList.add('menu-open')
 
+      // animate menu
+      gsap.to('.main-menu', {
+        duration: 1,
+        ease: 'Expo.easeInOut',
+        x: 0
+      })
+
+      // update state variable
+      this.menuOpen = true
+
+      console.log('open menu')
+    },
+    closeMenu () {
+      // enable scrolling
+      document.body.classList.remove('disable-scrolling')
+      this.mainMenu.classList.remove('menu-open')
+
+      // animate menu
+      gsap.to('.main-menu', {
+        duration: 1,
+        ease: 'Expo.easeInOut',
+        x: '100%'
+      })
+
+      // update state variable
+      this.menuOpen = false
+
+      console.log('close menu')
+    }
   }
 }
 </script>
